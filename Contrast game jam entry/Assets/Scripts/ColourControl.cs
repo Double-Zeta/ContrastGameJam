@@ -6,12 +6,13 @@ public class ColourControl : MonoBehaviour
 {
     public Renderer render;
     public bool isWhite = true;
+    public Vector3 StartPos;
 
     private void Start()
     {
         render = GetComponent<Renderer>();
-        render.material.SetColor("_Color", Color.white);      
-       
+        render.material.SetColor("_Color", Color.white);
+        StartPos = transform.position; 
     }
     // Update is called once per frame
 
@@ -40,10 +41,14 @@ public class ColourControl : MonoBehaviour
         
 
     }
-        
-        
-    
 
-       
-   
+
+    public void Resetlevel()
+    {
+        gameObject.transform.position = StartPos;
+    }
+
+
+
+
 }
