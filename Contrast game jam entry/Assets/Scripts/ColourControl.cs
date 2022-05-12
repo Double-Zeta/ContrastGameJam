@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ColourControl : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class ColourControl : MonoBehaviour
     private void Update()
     {
         colourChange();
+        Resetlevel();
     }
     
    public void colourChange()
@@ -45,7 +47,11 @@ public class ColourControl : MonoBehaviour
 
     public void Resetlevel()
     {
-        gameObject.transform.position = StartPos;
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            string currentScene = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentScene);
+        }
     }
 
 

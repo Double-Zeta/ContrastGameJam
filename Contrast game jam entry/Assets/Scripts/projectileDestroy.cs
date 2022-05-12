@@ -6,9 +6,6 @@ public class projectileDestroy : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "projectile")
-        {
-            Destroy(other);
-        }
+        Destroy(GameObject.FindWithTag("projectile"));
     }
 }
