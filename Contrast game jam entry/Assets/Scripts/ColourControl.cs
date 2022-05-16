@@ -21,6 +21,7 @@ public class ColourControl : MonoBehaviour
     {
         colourChange();
         Resetlevel();
+        QuitGame();
     }
     
    public void colourChange()
@@ -51,6 +52,15 @@ public class ColourControl : MonoBehaviour
         {
             string currentScene = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentScene);
+        }
+    }
+
+    public void QuitGame()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("Quitting...");
         }
     }
 

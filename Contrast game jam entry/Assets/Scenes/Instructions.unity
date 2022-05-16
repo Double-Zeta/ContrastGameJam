@@ -528,7 +528,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "WASD - Move\nSpace - Jump\nShift - Run\nR - Change Colour \nF - Reset
-    Level"
+    Level\nEsc - Quit Game"
 --- !u!222 &1368532312
 CanvasRenderer:
   m_ObjectHideFlags: 0
